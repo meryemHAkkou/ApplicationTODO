@@ -1,0 +1,61 @@
+<a>{{post.title}}
+    <br>
+    <br>
+</a>
+<div class="row">
+    <div class="container">
+
+        <div class="col-md-2">
+            <div class="row">
+                Order by :
+                <div>
+                    <label class="checkbox-inline">
+                        <input type="radio" value="" name="a" ng-click="order='name'"> Name
+                    </label>
+
+
+                </div>
+                <div>
+                    <label class="checkbox-inline">
+                        <input type="radio" value="" name="a" ng-click="order='title'"> Title
+                    </label>
+                </div>
+                <div>
+                    <label class="checkbox-inline">
+                        <input type="radio" value="" name="a" ng-click="order='body'"> Body
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-10">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 col-sm-4">
+                        <input ng-model="search.name" placeholder="search">
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                        <input ng-model="search.title" placeholder="search">
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                        <input ng-model="search.body" placeholder="search">
+                    </div>
+                </div>
+
+
+                <div class="row" ng-repeat="post in posts  | filter:search  | orderBy:order">
+
+                    <div class="col-md-4 col-sm-4">
+                        {{post.name=users[post.userId-1].name}}
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                        {{post.title}}
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                        {{post.body}}
+                        <br>
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

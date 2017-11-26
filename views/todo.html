@@ -1,0 +1,12 @@
+<br> <br> <br>
+
+<div class="container">
+        <h3><strong> Users </strong></h3>
+        <br>
+    <span ng-repeat="user in users">
+        <a ng-href="#!/afficher/{{user.id}}" class="list-group-item">
+            {{user.name.split(" ")[0]}} {{user.name.split(" ")[1]}}
+            <br>
+        </a>
+    </span>
+</div>

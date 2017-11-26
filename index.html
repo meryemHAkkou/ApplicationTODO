@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="TP">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/main.css">
+
+</head>
+
+<body>
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+        <div class="navbar-header">
+            <span>
+                <a ng-href="#" class="navbar-brand">Home</a>
+            </span>
+            <span>
+                <a ng-href="#!/posts" class="navbar-brand">Posts</a>
+            </span>
+            <span>
+                <a ng-href="#!/todo" class="navbar-brand">TODO</a>
+            </span>
+
+        </div>
+    </div>
+    <div class="row">
+            <h1>Bienvenue sur TODO !</h1>
+            <div>
+    <div ng-view></div>
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="TP.js"></script>
+    <!-- endbuild -->
+</body>
+
+</html>
